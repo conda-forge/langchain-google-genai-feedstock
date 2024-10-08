@@ -1,5 +1,5 @@
 {% set name = "langchain-google-genai" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain_google_genai-{{ version }}.tar.gz
-  sha256: 50c9381a01073bba5eeddfe229d35bbf9e9c9f593f7413f2aa0cb6b44a861ac0
+  sha256: 44dd7d5e55cc532a976f378164fbb0aa088114121b5e12f56e9b22acb975742d
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - pydantic >=2,<3
     - python >=3.9,<4.0
     - langchain-core >=0.3.0,<0.4
-    - google-generativeai >=0.7.0,<0.8.0
+    - google-generativeai >=0.8.0,<0.9.0
     - grpcio
   run_constrained:
     - pillow >=10.1.0,<11.0.0
