@@ -1,5 +1,5 @@
 {% set name = "langchain-google-genai" %}
-{% set version = "2.0.4" %}
+{% set version = "2.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain_google_genai-{{ version }}.tar.gz
-  sha256: 2ac2e5c5a8ad5a7d22e6d1e169af1ecae4afc77ca53e7dadf72e11a543f874b5
+  sha256: f027d845091b147537481c1e17adb25a8acfca1fa3b3c7b7c7ca16463ad37173
 
 build:
   noarch: python
