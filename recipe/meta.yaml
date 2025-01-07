@@ -12,17 +12,17 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
     - filetype >=1.2.0,<2.0.0
     - pydantic >=2,<3
-    - python >=3.9,<4.0
+    - python >={{ python_min }},<4.0
     - langchain-core >=0.3.27,<0.4.0
     - google-generativeai >=0.8.0,<0.9.0
     - grpcio
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/langchain-ai/langchain-google
