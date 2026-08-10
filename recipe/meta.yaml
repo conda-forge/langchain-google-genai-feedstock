@@ -1,5 +1,5 @@
 {% set name = "langchain-google-genai" %}
-{% set version = "4.3.2" %}
+{% set version = "4.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain_google_genai-{{ version }}.tar.gz
-  sha256: 6471769a4463fedb10d2d19a9b56c31de1cde505edf7fffd8cdbf98af8c1d7da
+  sha256: f051b98aaf223cf9092fc27c280dfec63070fc0022dc513640b2da138c9fa2f0
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }},<4.0
-    - langchain-core >=1.5.1,<2.0.0
+    - langchain-core >=1.5.3,<2.0.0
     - google-genai >=1.65.0,<3.0.0
     - pydantic >=2.0.0,<3.0.0
     - filetype >=1.2.0,<2.0.0
