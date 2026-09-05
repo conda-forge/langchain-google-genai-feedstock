@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: langchain-google-genai
+  version: "4.4.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/langchain_google_genai-${{ version }}.tar.gz
+  sha256: 7871beec56ac07b719f77c46997845db6ff2267b817bffb0f97877053b0895d7
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }},<4.0
+    - langchain-core >=1.6.1,<2.0.0
+    - google-genai >=2.20.0,<3.0.0
+    - pydantic >=2.0.0,<3.0.0
+    - filetype >=1.2.0,<2.0.0
+
+tests:
+  - python:
+      imports:
+        - langchain_google_genai
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: An integration package connecting Google's genai package and LangChain
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/langchain-ai/langchain-google
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
