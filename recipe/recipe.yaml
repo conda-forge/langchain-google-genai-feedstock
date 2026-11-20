@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: langchain-google-genai
-  version: 4.5.1
+  version: 4.5.2
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/langchain_google_genai-${{ version }}.tar.gz
-  sha256: 494747fac64ea0f2bf20e7bf4a607db324c47a4f20bb20996649a23c102588e0
+  sha256: e098d1d52fe6107e7230316da1cf2caed55a52344c4f5351ade6a8b08de5d190
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<4.0
-    - langchain-core >=1.8.0,<2.0.0
+    - langchain-core >=1.8.4,<2.0.0
     - google-genai >=3.3.0
     - pydantic >=2.0.0
     - filetype >=1.2.0
