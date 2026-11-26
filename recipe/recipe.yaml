@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: langchain-google-genai
-  version: 4.5.2
+  version: "4.5.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/langchain_google_genai-${{ version }}.tar.gz
-  sha256: e098d1d52fe6107e7230316da1cf2caed55a52344c4f5351ade6a8b08de5d190
+  sha256: a68e4f605ead52670d64fcc7923caa96edc0894d8d75d7aa0ae4591106a25260
 
 build:
   number: 0
